@@ -5,8 +5,9 @@ import 'package:todoapi_aplication/features/home/data/sources/todo_data_source.d
 
 final GetIt getIt = GetIt.instance;
 
+
 void serviceLocator() {
-  getIt.registerLazySingleton<ApiCalls>(() => ApiCalls());
-  getIt.registerLazySingleton<TodoDataSource>(() => TodoDataSource);
-  getIt.registerLazySingleton<TodoRepository>(() => TodoRepository());
+  getIt.registerLazySingleton<ApiCalls>(getIt.call<ApiCalls>);
+  getIt.registerLazySingleton<TodoDataSource>(getIt.call<TodoDataSource>);
+  getIt.registerLazySingleton<TodoRepository>(getIt.call<TodoRepository>);
 }
