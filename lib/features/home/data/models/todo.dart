@@ -22,7 +22,7 @@ Todo({
       'id': id,
       'title': title,
       'description': description,
-      'Compeleted': isCompleted,
+      'compeleted': isCompleted,
     };
   }
 
@@ -31,7 +31,7 @@ Todo({
       id: map['id'] as int,
       title: map['title'] as String,
       description: map['description'] as String,
-      isCompleted: map['isCompleted'] as bool,
+      isCompleted: map['completed'] ==1?true:false,
     );
   }
 

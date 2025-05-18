@@ -12,7 +12,7 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
 
   TodoBloc(this.todoRepository) : super(TodoInitial()) {
     on<TodoEvent>((event, emit) {
-      // TODO: implement event handler
+      // TODO: implement event handler 
     });
 
     on<FetchTodoEvent>((event, emit) async {

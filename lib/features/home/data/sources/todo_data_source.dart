@@ -14,7 +14,7 @@ abstract class TodoDataSource {
 
     @override
     Future<List<Todo>> fetchTodo() async{
-      final result = await apiCalls.getData(endpoint: "todo");
+      final result = await apiCalls.getData(endpoint: "todo") as List;
       return result.map((todo) => Todo.fromMap(todo)).toList();
       // throw UnimplementedError();
     }
